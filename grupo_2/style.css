@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+}
+table {
+    margin: auto;
+    font-size: 40pt;
+}
+td {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #000;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+p {
+    text-align: center;
+    font-size: 20pt;
+}
+
+/* Project styles */
+.header {
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(90deg, #f0f4ff, #f7fff0);
+    border-bottom: 1px solid #e0e6ef;
+}
+.nav {
+    margin-top: 0.5rem;
+}
+.nav-link {
+    margin: 0 0.75rem;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    padding: 1rem 1.25rem;
+    margin-bottom: 1rem;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+.matrix-input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.45rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+.controls {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+.btn {
+    padding: 0.5rem 0.9rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+.btn-primary { background: #4b7bec; color: #fff; }
+.btn-secondary { background: #f1f3f8; color: #222; }
+.result { margin-top: 0.75rem; font-weight: 700; }
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Small transition for inputs and buttons */
+.matrix-input, .btn { transition: transform 0.12s ease, box-shadow 0.12s ease; }
+.btn:active { transform: translateY(1px); }
+
+.footer { text-align: center; padding: 1rem; color: #666; }

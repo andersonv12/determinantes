@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Determinante — Projeto Matrizes</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* small local spacing */
+        .section { margin-bottom: 1rem; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Calcular Determinantes</h1>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Início</a>
+            <a href="determinante.html" class="nav-link">Determinante</a>
+            <a href="sistema.html" class="nav-link">Sistema Linear (Cramer)</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="card section">
+            <h2>Determinante 2×2</h2>
+            <div class="grid">
+                <input class="matrix-input" id="d2_a" type="number" placeholder="a11">
+                <input class="matrix-input" id="d2_b" type="number" placeholder="a12"><br>
+                <input class="matrix-input" id="d2_c" type="number" placeholder="a21">
+                <input class="matrix-input" id="d2_d" type="number" placeholder="a22">
+            </div>
+            <div class="controls">
+                <button class="btn btn-primary" onclick="calculateDet2()">Calcular</button>
+                <button class="btn btn-secondary" onclick="clearDet2()">Limpar</button>
+            </div>
+            <div id="resultDet2" class="result" aria-live="polite"></div>
+        </div>
+
+        <div class="card section">
+            <h2>Determinante 3×3 (Regra de Sarrus)</h2>
+            <div class="grid">
+                <input class="matrix-input" id="d3_a11" type="number" placeholder="a11">
+                <input class="matrix-input" id="d3_a12" type="number" placeholder="a12">
+                <input class="matrix-input" id="d3_a13" type="number" placeholder="a13">
+                <input class="matrix-input" id="d3_a21" type="number" placeholder="a21">
+                <input class="matrix-input" id="d3_a22" type="number" placeholder="a22">
+                <input class="matrix-input" id="d3_a23" type="number" placeholder="a23">
+                <input class="matrix-input" id="d3_a31" type="number" placeholder="a31">
+                <input class="matrix-input" id="d3_a32" type="number" placeholder="a32">
+                <input class="matrix-input" id="d3_a33" type="number" placeholder="a33">
+            </div>
+            <div class="controls">
+                <button class="btn btn-primary" onclick="calculateDet3()">Calcular</button>
+                <button class="btn btn-secondary" onclick="clearDet3()">Limpar</button>
+            </div>
+            <div id="resultDet3" class="result" aria-live="polite"></div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Use exemplos do professor para testar os resultados.</p>
+    </footer>
+
+    <script src="math.js"></script>
+</body>
+</html>

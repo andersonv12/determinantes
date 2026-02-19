@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sistema Linear — Cramer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Resolver Sistema Linear 3×3 (Cramer)</h1>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Início</a>
+            <a href="determinante.html" class="nav-link">Determinante</a>
+            <a href="sistema.html" class="nav-link">Sistema Linear (Cramer)</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="card">
+            <h2>Sistema: a11·x + a12·y + a13·z = b1 (e assim por diante)</h2>
+            <div class="section">
+                <div class="grid">
+                    <input class="matrix-input" id="s_a11" type="number" placeholder="a11">
+                    <input class="matrix-input" id="s_a12" type="number" placeholder="a12">
+                    <input class="matrix-input" id="s_a13" type="number" placeholder="a13">
+                     <input class="matrix-input" id="s_b1" type="number" placeholder="b1">
+
+                    <input class="matrix-input" id="s_a21" type="number" placeholder="a21">
+                    <input class="matrix-input" id="s_a22" type="number" placeholder="a22">
+                    <input class="matrix-input" id="s_a23" type="number" placeholder="a23">
+                    <input class="matrix-input" id="s_b2" type="number" placeholder="b2">
+
+                    <input class="matrix-input" id="s_a31" type="number" placeholder="a31">
+                    <input class="matrix-input" id="s_a32" type="number" placeholder="a32">
+                    <input class="matrix-input" id="s_a33" type="number" placeholder="a33">
+                                   
+                    
+                    <input class="matrix-input" id="s_b3" type="number" placeholder="b3">
+                </div>
+            </div>
+            <div class="controls">
+                <button class="btn btn-primary" onclick="solveSystem()">Calcular</button>
+                <button class="btn btn-secondary" onclick="clearSystem()">Limpar</button>
+            </div>
+            <div id="resultSystem" class="result" aria-live="polite"></div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>O método de Cramer exige que o determinante da matriz dos coeficientes seja diferente de zero.</p>
+    </footer>
+
+    <script src="math.js"></script>
+</body>
+</html>
