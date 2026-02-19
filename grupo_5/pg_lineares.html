@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link  href="style.css" rel="stylesheet"/>
+</head>
+<body">
+    <a href="pg_inicial.html" id="voltar">&lt-</a>
+    <button onclick="information()"id="info_button">?</button>
+    <div class="container d-flex flex-column justify-content-center align-items-center vh-100 p-4">
+
+    <div class="p-4 rounded fundo" style="width: 500px; ">
+            <h2  style="text-align: center; margin-bottom: 20px;"><img src="https://fontmeme.com/permalink/251113/05f9ed87a38e2965b4e5b79066a08d57.png" alt="futuristic-fonts" border="0"></h2>
+            <div id="principal">
+            <h4 style="text-align: center; margin-bottom: 20px;"><img src="https://fontmeme.com/permalink/251112/a84b0fe1dda0bd7752c1720b1679a9f7.png" alt="futuristic-fonts" border="0"></a></h4>
+            
+            <div class="row">
+                <div class="col-12 ">
+                    <center>
+                        <button id="botao" onclick="mudar_sistema()">Sistema 3x3</button>
+                    </center>
+                </div>
+            </div>
+            <div class="container text-center" id="s2x2" style="visibility: visible;"> 
+                    
+                    
+                    <form>
+                    <div class="row">
+                    <div class="col-4 rounded border border-2 fundo_div">
+                    <input type="text" id="C11" placeholder="x" >
+                    </div>
+                    <div class="col-4 rounded border border-2 fundo_div">
+                    <input type="text" id="C12" placeholder="y" >
+                    </div>
+                    <div class="col-4 rounded border border-2 fundo_div">
+                    <input type="text" id="C13" placeholder="r" >
+                    </div>
+                    
+                    <div class="col-4 rounded border border-2 fundo_div">
+                    <input type="text" id="C21" placeholder="x" >
+                    </div>
+                    <div class="col-4 rounded border border-2 fundo_div">
+                    <input type="text" id="C22" placeholder="y" >
+                    </div>
+                    <div class="col-4 rounded border border-2 fundo_div">
+                    <input type="text" id="C23" placeholder="r" >
+                    </div>
+                    
+                    <button id="calcular" onclick='sis_2()'>Calcular</button>
+                    </div>
+                    </form>
+              
+
+            </div>
+            <div class="container text-center" id="s3x3" style="visibility: hidden; display: none;">
+                    
+                    
+                    <form>
+                    <div class="row">
+                        
+                    <div class="col-3 rounded border border-2 p-1 overflow-hidden fundo_div">
+                    <input type="text" id="D11" placeholder="x" >
+                    </div>
+                    <div class="col-3 rounded border border-2 p-1 overflow-hidden fundo_div">
+                    <input type="text" id="D12" placeholder="y" >
+                    </div>
+                    <div class="col-3 rounded border border-2 p-1 overflow-hidden fundo_div">
+                    <input type="text" id="D13" placeholder="z" >
+                    </div>
+                    <div class="col-3 rounded border border-2 p-1 overflow-hidden fundo_div">
+                    <input type="text" id="D14" placeholder="r" >
+                    </div>
+
+
+                    <div class="col-3 rounded border border-2 p-1 overflow-hidden fundo_div">
+                    <input type="text" id="D21" placeholder="x" >
+                    </div>
+                    <div class="col-3 rounded border border-2 p-1 overflow-hidden fundo_div">
+                    <input type="text" id="D22" placeholder="y" >
+                    </div>
+                    <div class="col-3 rounded border border-2 p-1 overflow-hidden fundo_div">
+                    <input type="text" id="D23" placeholder="z" >
+                    </div>
+                    <div class="col-3 rounded border border-2 p-1 overflow-hidden fundo_div">
+                    <input type="text" id="D24" placeholder="r" >
+                    </div>
+
+                    <div class="col-3 rounded border border-2 p-1 overflow-hidden fundo_div">
+                    <input type="text" id="D31" placeholder="x" >
+                    </div>
+                    <div class="col-3 rounded border border-2 p-1 overflow-hidden fundo_div">
+                    <input type="text" id="D32" placeholder="y" >
+                    </div>
+                    <div class="col-3 rounded border border-2 p-1 overflow-hidden fundo_div">
+                    <input type="text" id="D33" placeholder="z" >
+                    </div>
+                    <div class="col-3 rounded border border-2 p-1 overflow-hidden fundo_div">
+                    <input type="text" id="D34" placeholder="r" >
+                    </div>
+
+                    <button id="calcular" onclick='sis_3()'>Calcular</button>
+                    </div>
+                
+                    </form>
+            </div>
+            <div class="container text-center" id="resultado" style="visibility: hidden; display: none;"> 
+                <img src="https://fontmeme.com/permalink/251112/aa47f83888d36e2ceba9fdb55c2005cf.png" alt="futuristic-fonts" border="0" id="no_det1" style="visibility: hidden; display: none;">
+                <img src="https://fontmeme.com/permalink/251112/6e30d2900a27bbc084cc79ab9579c836.png" alt="futuristic-fonts" border="0" id="no_det2" style="visibility: hidden; display: none;">
+                <img src="https://fontmeme.com/permalink/251112/43b54416219b8765b80bfc147709647d.png" alt="futuristic-fonts" border="0" id="nan" style="visibility: hidden; display: none;">
+                <img src="https://fontmeme.com/permalink/251112/26df0cd8724cbe06e458ceed523edbf2.png" alt="futuristic-fonts" border="0" id="solucao" style="visibility: hidden; display: none;">
+                <img src="https://fontmeme.com/permalink/251112/3579081e0d0c61541367411e5ba6645b.png" alt="futuristic-fonts" border="0" id="nan2" style="visibility: hidden; display: none;">
+                <center>
+                    <h2 id="incognitas" style="color: white;"></h2>
+                </center>
+            </div>
+    </div>
+            <div id="documento" style="display: none; visibility: hidden; color: white; font-family: Arial, Helvetica, sans-serif; font-size: x-large;">
+        Coloque em seus respectivos locais os algarismos do sistema, para utilizar decimal colque . no local da vírgula, como em 2.4, e se quiser utilizar fração coloque usando /, como em 5/3 (lê se cinco terços). Esta calculadora responde sempre em decimal com duas casas após a vírgula.
+    </div>   
+    </div>
+ 
+</div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

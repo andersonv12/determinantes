@@ -1,0 +1,99 @@
+body {
+    background-image: linear-gradient(90deg, rgba(156, 0, 199, 1) 0%, rgba(25, 136, 227, 1) 100%);
+    color: rgb(255, 255, 255);
+}
+.pq {
+  background-image: linear-gradient(90deg,rgba(156, 0, 199, 1) 0%, rgba(25, 136, 227, 1) 100%); 
+  color: rgb(0, 0, 0);
+}
+  
+header {
+  text-align: center;
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.box {
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 25px;
+  margin: 10px auto;
+  padding: 15px 15px;
+  text-align: center;
+  box-shadow: 0 0 30px;
+}
+
+.redirects  {
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 25px;
+  width: auto;
+  margin: 10px auto 30px;
+  padding: 30px 30px;
+  text-align: center;
+  box-shadow: 0 5px 10px;
+  transition: padding 0.1s;
+}
+.fundo {
+  background-image: linear-gradient(120deg,rgba(156, 0, 199, 1) 0%, rgba(25, 136, 227, 1) 100%); 
+  border-radius: 25px;
+  width: auto;
+  margin: 10px auto 30px;
+  padding: 30px 30px;
+  text-align: center;
+  box-shadow: 0 5px 10px;
+  transition: padding 0.1s;
+}
+  
+.redirects:hover {
+  cursor: pointer;
+  padding: 50px;
+}
+#botao {
+margin-top: 5px;
+    padding: 5px;
+    width: 100%;
+    background-color: rgba(238, 212, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgb(0,0,0, 0.5);
+    color: white;
+    border-width: 0;
+}
+input {
+    background: transparent;
+    border: 0cap;
+    width: auto;
+}
+.fundo_div {
+    background-color: rgba(255, 255, 255, 0.299);
+    max-width: 100%;
+    
+
+}
+#calcular {
+    background-color: rgba(255, 255, 255, 0.195);
+    color: rgb(227, 217, 217);
+}
+#voltar {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    background-color: rgba(55, 0, 255, 0.3);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgb(0,0,0, 0.5);
+    color: white;
+    text-decoration: none;
+}
+#info_button {
+    position: fixed;
+    top: 10px;
+    left: 60px;
+    padding: 10px;
+    background-color: rgba(55, 0, 255, 0.3);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgb(0,0,0, 0.5);
+    color: white;
+    border: 0vmax;
+}
