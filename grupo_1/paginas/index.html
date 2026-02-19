@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MATEMÁQUINA EXTERMATRIZADORA</title>
+
+  <!-- ===== Bootstrap ===== -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- ===== Estilo personalizado ===== -->
+  <link rel="stylesheet" href="../estilos/estilo_index.css">
+</head>
+
+<body>
+
+  <!-- ===================== Cabeçalho ===================== -->
+<header class="cabecalho py-3">
+  <!-- Botão de menu (só aparece quando os puxadores somem) -->
+  <div id="div-botao-menu">
+    <button id="botao-menu">☰</button>
+  </div>
+
+  <!-- Título centralizado -->
+  <h1>MATEMÁQUINA EXTERMATRIZADORA</h1>
+</header>
+  <!-- ===================== Menu Lateral ===================== -->
+  <div id="menu-overlay"></div>
+  <div id="menu-lateral">
+    <button class="menu-fechar" id="menu-fechar">×</button>
+    <ul>
+      <li class="menu-item" data-alvo="#ferramentas">Ferramentas</li>
+      <li class="menu-item" data-alvo="#determinante-tutorial">Tutorial Determinante</li>
+      <li class="menu-item" data-alvo="#sistema-tutorial">Tutorial Sistema Linear</li>
+      <li class="menu-item" data-alvo="#simbolos-menu">Símbolos Matemáticos</li>
+    </ul>
+  </div>
+
+
+  
+  <!-- ===================== PUXADORES ===================== -->
+  <div class="puxadores">
+    <!-- Puxador 1: Tutorial Determinante -->
+    <div class="puxador-container">
+      <button class="puxador-botao">📖 Tutorial: Determinante <span class="puxador-texto-ajuda"><img class="icones_puxadores" src="../imagens/info_icone.png"></span></button>
+      <div class="puxador-conteudo" id="puxadores-conteudo-limitado">
+        <div class="puxador-cabecalho">
+  <h3>Como Calcular o Determinante</h3>
+  <button class="puxador-fechar">×</button>
+</div>
+<div class="puxador-corpo">
+  <h4>1. Escolha o tamanho da matriz:</h4>
+  <p>Selecione se quer uma matriz <strong>2x2</strong> ou <strong>3x3</strong> no menu acima. O tamanho define o tipo de cálculo que será usado.</p>
+
+  <h4>2. Preencha os valores:</h4>
+  <p>Digite os números (ou expressões) em cada posição da matriz. Você pode misturar números normais com símbolos matemáticos, como <strong>√</strong>, <strong>^</strong> ou <strong>log</strong>.</p>
+
+  <h4>3. Use símbolos matemáticos:</h4>
+  <p>Você pode digitar expressões como:</p>
+  <ul>
+    <li><strong>√16</strong> → significa raiz quadrada de 16</li>
+    <li><strong>2^3</strong> → significa 2 elevado a 3</li>
+    <li><strong>10/2</strong> → divisão normal</li>
+    <li><strong>log10</strong> → logaritmo de 10</li>
+  </ul>
+
+  <h4>4. Clique em "Calcular Determinante":</h4>
+  <p>O site vai resolver automaticamente os cálculos e mostrar o resultado logo abaixo. Se você usou símbolos, ele também faz a conversão matemática correta!</p>
+
+  <hr>
+
+  <h4>📘 Entendendo o que é o Determinante:</h4>
+  <p>O determinante é um número que representa certas propriedades de uma matriz — por exemplo, se ela é invertível (tem inversa) ou não. Ele é muito usado em sistemas lineares e geometria, porque indica se um conjunto de vetores forma um plano, uma linha ou um ponto.</p>
+
+  <h4>📐 Fórmulas de Cálculo:</h4>
+  <p><strong>Para matriz 2x2:</strong></p>
+  <p>
+    <code>
+      |a&nbsp;b|<br>
+      |c&nbsp;d|
+    </code>
+  </p>
+  <p>O determinante é calculado assim: <strong>det = a·d − b·c</strong></p>
+
+  <p><strong>Exemplo:</strong><br>
+  Se a = 3, b = 2, c = 1, d = 4 → det = (3×4) − (2×1) = 12 − 2 = <strong>10</strong></p>
+
+  <p><strong>Para matriz 3x3:</strong> você pode usar a <strong>Regra de Sarrus</strong>:</p>
+  <p>
+    <code>
+      |a&nbsp;b&nbsp;c|<br>
+      |d&nbsp;e&nbsp;f|<br>
+      |g&nbsp;h&nbsp;i|
+    </code>
+  </p>
+  <p>Multiplique as diagonais principais e subtraia as diagonais secundárias:</p>
+  <p><strong>det = (a·e·i + b·f·g + c·d·h) − (c·e·g + b·d·i + a·f·h)</strong></p>
+
+  <p><strong>Exemplo:</strong><br>
+  Se a=1, b=2, c=3, d=4, e=5, f=6, g=7, h=8, i=9<br>
+  → det = (1·5·9 + 2·6·7 + 3·4·8) − (3·5·7 + 2·4·9 + 1·6·8)<br>
+  → det = (45 + 84 + 96) − (105 + 72 + 48) = 225 − 225 = <strong>0</strong></p>
+
+  <hr>
+
+  <h4>💡 Dica Final:</h4>
+  <p>Use o <strong>puxador de símbolos</strong> para copiar rapidamente símbolos como √, ^, log e sen! Assim você pode montar expressões completas sem precisar procurar no teclado.</p>
+
+  <h4> IMPORTANTE: <h4>
+  <p> Para representar decimal use ".", não "," </p>
+</div>
+
+      </div>
+    </div>
+    
+    <!-- Puxador 2: Tutorial Sistema Linear -->
+    <div class="puxador-container">
+      <button class="puxador-botao">📚 Tutorial: Sistema Linear <span class="puxador-texto-ajuda"><img class="icones_puxadores" src="../imagens/info_icone.png"></span></button>
+      <div class="puxador-conteudo" id="puxadores-conteudo-limitado">
+        <div class="puxador-cabecalho">
+          <h3>Como Resolver Sistema Linear</h3>
+          <button class="puxador-fechar">×</button>
+        </div>
+        <div class="puxador-corpo">
+  <h4>1. Escolha o tamanho do sistema:</h4>
+  <p>Selecione se o sistema terá <strong>2 incógnitas</strong> (2x2) ou <strong>3 incógnitas</strong> (3x3). Isso define quantas equações e variáveis serão resolvidas (X, Y e, se for o caso, Z).</p>
+
+  <h4>2. Digite os coeficientes:</h4>
+  <p>Preencha os valores de cada equação nos campos correspondentes. Cada número representa o coeficiente que multiplica a variável. Exemplo: em <strong>2x + 3y = 5</strong>, o “2” é o coeficiente de X e o “3” é o de Y.</p>
+
+  <h4>3. Use símbolos matemáticos:</h4>
+  <p>Você pode digitar expressões com símbolos como:</p>
+  <ul>
+    <li><strong>√16</strong> → raiz quadrada de 16</li>
+    <li><strong>2^3</strong> → 2 elevado a 3</li>
+    <li><strong>10/2</strong> → divisão normal</li>
+    <li><strong>log10</strong> → logaritmo de 10</li>
+  </ul>
+
+  <h4>4. Clique em "Calcular Sistema":</h4>
+  <p>O site resolverá automaticamente o sistema usando o método de determinantes (Regra de Cramer) e mostrará os valores de X, Y (e Z, se for 3x3).</p>
+
+  <hr>
+
+  <h4>📘 Entendendo como funciona:</h4>
+  <p>O cálculo é feito com base nos determinantes das matrizes formadas pelos coeficientes do sistema. O valor de cada variável é obtido dividindo o determinante de sua matriz individual pelo determinante principal.</p>
+  <p><strong>Exemplo (2x2):</strong></p>
+  <p>
+    <code>
+      a₁x + b₁y = c₁<br>
+      a₂x + b₂y = c₂
+    </code>
+  </p>
+  <p>det = a₁·b₂ − a₂·b₁</p>
+  <p>X = (c₁·b₂ − c₂·b₁) / det</p>
+  <p>Y = (a₁·c₂ − a₂·c₁) / det</p>
+
+  <p><strong>Exemplo:</strong><br>
+  2x + 3y = 8<br>
+  4x − y = 2<br>
+  → det = (2×(−1)) − (4×3) = −2 − 12 = −14<br>
+  → X = ((8×(−1)) − (2×3)) / (−14) = (−8 − 6) / (−14) = 1<br>
+  → Y = ((2×2) − (4×8)) / (−14) = (4 − 32) / (−14) = 2</p>
+
+  <hr>
+
+  <h4>📊 Tipos de Resultado:</h4>
+  <p><strong>Sistema Possível e Determinado:</strong> Uma única solução — valores específicos para X, Y (e Z).</p>
+  <p><strong>Sistema Possível e Indeterminado:</strong> Infinitas soluções — as equações são proporcionais.</p>
+  <p><strong>Sistema Impossível:</strong> Sem solução — as equações são contraditórias.</p>
+  <p><strong>Sistema Errado:</strong> Sem solução — Algum campo apresenta campo com formatação incorreta.</p>
+
+  <hr>
+
+  <h4>💡 Dica Final:</h4>
+  <p>Use o <strong>puxador de símbolos</strong> para copiar rapidamente √, ^, log e outros símbolos! Assim fica bem mais fácil montar e resolver seus sistemas sem precisar procurar no teclado.</p>
+
+  <h4> IMPORTANTE: </h4>
+  <p> Para representar decimal use ".", não ",".</p>
+</div>
+
+
+      </div>
+    </div>
+    
+    <!-- Puxador 3: Símbolos Matemáticos -->
+    <div class="puxador-container">
+      <button class="puxador-botao">🔢 Símbolos Matemáticos <span class="puxador-texto-ajuda"><img class="icones_puxadores icones_simbolo" src="../imagens/simb_icone.png"></span></button>
+      <div class="puxador-conteudo" id="puxadores-conteudo-limitado">
+        <div class="puxador-cabecalho">
+          <h3>Símbolos para Copiar</h3>
+          <button class="puxador-fechar">×</button>
+        </div>
+        <div class="puxador-corpo">
+          <p class="texto-ajuda">Clique em um símbolo para copiar e usar nos campos!</p>
+          <div class="simbolos-grid">
+            <button class="botao-simbolo" data-simbolo="√">√</button>
+            <button class="botao-simbolo" data-simbolo="^">^</button>
+            <button class="botao-simbolo" data-simbolo="/">/</button>
+            <button class="botao-simbolo" data-simbolo="log">log</button>
+            <button class="botao-simbolo" data-simbolo="ln">ln</button>
+            <button class="botao-simbolo" data-simbolo="sen">sen</button>
+            <button class="botao-simbolo" data-simbolo="cos">cos</button>
+            <button class="botao-simbolo" data-simbolo="tg">tg</button>
+          </div>
+          <p class="texto-copiado" id="texto-copiado"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== CONTEÚDOS PARA MOBILE ===================== -->
+  <!-- Essas seções aparecem apenas em mobile e são alternadas pelo menu -->
+  
+  <!-- Seção: Ferramentas (padrão) -->
+  <div id="ferramentas" class="secao-mobile ativa">
+  <!-- ===================== Container principal das ferramentas ===================== -->
+  <div id="borda_site">
+
+    <!-- ===================== Botões das abas ===================== -->
+    <div class="abas d-flex justify-content-center my-2 mt-1 gap-2">
+      <button class="botao-aba ativo" data-alvo="#determinante">Determinante</button>
+      <button class="botao-aba" data-alvo="#sistema_linear">Sistema Linear</button>
+      <button class="botao-aba" data-alvo="#configuracao">
+        <img class="icones" src="../imagens/configuracao_icone.png">
+      </button>
+    </div>
+
+    <!-- ===================== Conteúdo das abas ===================== -->
+    <div class="conteudo-abas text-center">
+
+      <!-- ===== Aba Configurações ===== -->
+      <div id="configuracao" class="conteudo-aba d-none">
+        <button id="botao-tema" class="botoes_configuracao mt-3">Tema Escuro</button>
+        <br>
+      </div>
+
+      <!-- ===== Aba Sistema Linear ===== -->
+      <div id="sistema_linear" class="conteudo-aba d-none">
+
+        <!-- Seleção do tamanho -->
+        <label for="tamanho-sistema">Escolha o tamanho do sistema:</label>
+        <select id="tamanho-sistema" class="form-select w-auto mx-auto my-2">
+          <option value="2">2 incógnitas (2x2)</option>
+          <option value="3">3 incógnitas (3x3)</option>
+        </select>
+
+        <!-- Sistema 2x2 -->
+        <div id="inputs-2x2-sistema" class="container-sistema">
+          <div class="linha-sistema my-1">
+            <input type="text" class="input-sistema" placeholder="a11" id="2a11">
+            <span>X</span> <span>+</span>
+            <input type="text" class="input-sistema" placeholder="a12" id="2a12">
+            <span>Y</span> <span>=</span>
+            <input type="text" class="input-sistema" placeholder="b1" id="2b1">
+          </div>
+          <div class="linha-sistema my-1">
+            <input type="text" class="input-sistema" placeholder="a21" id="2a21">
+            <span>X</span> <span>+</span>
+            <input type="text" class="input-sistema" placeholder="a22" id="2a22">
+            <span>Y</span> <span>=</span>
+            <input type="text" class="input-sistema" placeholder="b2" id="2b2">
+          </div>
+
+          <!-- Botões e resultado -->
+          <div class="d-flex justify-content-center gap-2 mt-2">
+                <button class="botao-calcular" id="Button_sis2x2">Calcular Sistema</button>
+                <button id="resetarSis" class="botoesResetar">
+                  <img class="icones" src="../imagens/resetar_icone.png">
+                </button>
+          </div>
+
+          <div class="caixa-resultado mt-3" id="sis2x2">Resultado:</div>
+
+        </div>
+
+        <!-- Sistema 3x3 -->
+        <div id="inputs-3x3-sistema" class="container-sistema d-none">
+          <div class="linha-sistema my-1">
+            <input type="text" class="input-sistema" placeholder="a11" id="3a11">
+            <span>X</span> <span>+</span>
+            <input type="text" class="input-sistema" placeholder="a12" id="3a12">
+            <span>Y</span> <span>+</span>
+            <input type="text" class="input-sistema" placeholder="a13" id="3a13">
+            <span>Z</span> <span>=</span>
+            <input type="text" class="input-sistema" placeholder="b1" id="3b1">
+          </div>
+          <div class="linha-sistema my-1">
+            <input type="text" class="input-sistema" placeholder="a21" id="3a21">
+            <span>X</span> <span>+</span>
+            <input type="text" class="input-sistema" placeholder="a22" id="3a22">
+            <span>Y</span> <span>+</span>
+            <input type="text" class="input-sistema" placeholder="a23" id="3a23">
+            <span>Z</span> <span>=</span>
+            <input type="text" class="input-sistema" placeholder="b2" id="3b2">
+          </div>
+          <div class="linha-sistema my-1">
+            <input type="text" class="input-sistema" placeholder="a31" id="3a31">
+            <span>X</span> <span>+</span>
+            <input type="text" class="input-sistema" placeholder="a32" id="3a32">
+            <span>Y</span> <span>+</span>
+            <input type="text" class="input-sistema" placeholder="a33" id="3a33">
+            <span>Z</span> <span>=</span>
+            <input type="text" class="input-sistema" placeholder="b3" id="3b3">
+          </div>
+          <!-- Botões e resultado -->
+          <div class="d-flex justify-content-center gap-2 mt-2">
+                <button class="botao-calcular" id="Button_sis3x3">Calcular Sistema</button>
+                <button id="resetarSis" class="botoesResetar">
+                  <img class="icones" src="../imagens/resetar_icone.png">
+                </button>
+          </div>
+          
+          <div class="caixa-resultado mt-3" id="sis3x3">Resultado:</div>
+</div>
+</div>
+      <!-- ===== Aba Determinante ===== -->
+      <div id="determinante" class="conteudo-aba">
+
+        <!-- Seleção do tamanho -->
+        <label for="tamanho-matriz">Escolha o tamanho da matriz:</label>
+        <select id="tamanho-matriz" class="form-select w-auto mx-auto my-2">
+          <option value="2">2x2</option>
+          <option value="3">3x3</option>
+        </select>
+
+        <!-- Matriz 2x2 -->
+        <div id="inputs-2x2" class="container-matriz">
+          <div class="linha-matriz my-1">
+            <input type="text" class="input-matriz" placeholder="A11" id="2A11">
+            <input type="text" class="input-matriz" placeholder="A12" id="2A12">
+          </div>
+          <div class="linha-matriz my-1">
+            <input type="text" class="input-matriz" placeholder="A21" id="2A21">
+            <input type="text" class="input-matriz" placeholder="A22" id="2A22">
+          </div>
+          <!-- Botões e resultado -->
+        <div class="d-flex justify-content-center gap-2 mt-2">
+          <button class="botao-calcular" id="button_det2x2">Calcular Determinante</button>
+          <button id="resetarDet2x2" class="botoesResetar">
+            <img class="icones" src="../imagens/resetar_icone.png">
+          </button>
+        </div>
+
+        <div class="caixa-resultado mt-3" id="det2x2">Resultado:</div>
+        </div>
+
+        <!-- Matriz 3x3 -->
+        <div id="inputs-3x3" class="container-matriz d-none">
+          <div class="linha-matriz my-1">
+            <input type="text" class="input-matriz" placeholder="A11" id="3A11">
+            <input type="text" class="input-matriz" placeholder="A12" id="3A12">
+            <input type="text" class="input-matriz" placeholder="A13" id="3A13">
+          </div>
+          <div class="linha-matriz my-1">
+            <input type="text" class="input-matriz" placeholder="A21" id="3A21">
+            <input type="text" class="input-matriz" placeholder="A22" id="3A22">
+            <input type="text" class="input-matriz" placeholder="A23" id="3A23">
+          </div>
+          <div class="linha-matriz my-1">
+            <input type="text" class="input-matriz" placeholder="A31" id="3A31">
+            <input type="text" class="input-matriz" placeholder="A32" id="3A32">
+            <input type="text" class="input-matriz" placeholder="A33" id="3A33">
+          </div>
+        <!-- Botões e resultado -->
+        <div class="d-flex justify-content-center gap-2 mt-2">
+          <button class="botao-calcular" id="button_det3x3">Calcular Determinante</button>
+          <button id="resetarDet3x3" class="botoesResetar">
+            <img class="icones" src="../imagens/resetar_icone.png">
+          </button>
+        </div>
+
+        <div class="caixa-resultado mt-3" id="det3x3">Resultado:</div>
+        </div>
+
+        
+      </div>
+
+    </div> <!-- /conteúdo-abas -->
+  </div> <!-- /borda_site -->
+  </div>
+
+  <!-- Seção: Tutorial Determinante -->
+  <div id="determinante-tutorial" class="secao-mobile">
+    <div class="conteudo-mobile">
+      <h2>📖 Como Calcular Determinante</h2>
+      <div class="conteudo-tutorial">
+  <h4>1. Escolha o tamanho da matriz:</h4>
+  <p>Selecione se quer uma matriz <strong>2x2</strong> ou <strong>3x3</strong> no menu acima. O tamanho define o tipo de cálculo que será usado.</p>
+  
+  <h4>2. Preencha os valores:</h4>
+  <p>Digite os números (ou expressões) em cada posição da matriz. Você pode misturar números normais com símbolos matemáticos, como <strong>√</strong>, <strong>^</strong> ou <strong>log</strong>.</p>
+  
+  <h4>3. Use símbolos matemáticos:</h4>
+  <p>Você pode digitar expressões como:</p>
+  <ul>
+    <li><strong>√16</strong> → significa raiz quadrada de 16</li>
+    <li><strong>2^3</strong> → significa 2 elevado a 3</li>
+    <li><strong>10/2</strong> → divisão normal</li>
+    <li><strong>log10</strong> → logaritmo de 10</li>
+  </ul>
+  
+  <h4>4. Clique em "Calcular Determinante":</h4>
+  <p>O site vai resolver automaticamente os cálculos e mostrar o resultado logo abaixo. Se você usou símbolos, ele também faz a conversão matemática correta!</p>
+  
+  <hr>
+  
+  <h4>📘 Entendendo o que é o Determinante:</h4>
+  <p>O determinante é um número que representa certas propriedades de uma matriz — por exemplo, se ela é invertível (tem inversa) ou não. Ele é muito usado em sistemas lineares e geometria, porque indica se um conjunto de vetores forma um plano, uma linha ou um ponto.</p>
+  
+  <h4>📐 Fórmulas de Cálculo:</h4>
+  <p><strong>Para matriz 2x2:</strong></p>
+  <p>
+    <code>
+      |a&nbsp;b|<br>
+      |c&nbsp;d|
+    </code>
+  </p>
+  <p>O determinante é calculado assim: <strong>det = a·d − b·c</strong></p>
+  
+  <p><strong>Exemplo:</strong><br>
+  Se a = 3, b = 2, c = 1, d = 4 → det = (3×4) − (2×1) = 12 − 2 = <strong>10</strong></p>
+  
+  <p><strong>Para matriz 3x3:</strong> você pode usar a <strong>Regra de Sarrus</strong>:</p>
+  <p>
+    <code>
+      |a&nbsp;b&nbsp;c|<br>
+      |d&nbsp;e&nbsp;f|<br>
+      |g&nbsp;h&nbsp;i|
+    </code>
+  </p>
+  <p>Multiplique as diagonais principais e subtraia as diagonais secundárias:</p>
+  <p><strong>det = (a·e·i + b·f·g + c·d·h) − (c·e·g + b·d·i + a·f·h)</strong></p>
+  
+  <p><strong>Exemplo:</strong><br>
+  Se a=1, b=2, c=3, d=4, e=5, f=6, g=7, h=8, i=9<br>
+  → det = (1·5·9 + 2·6·7 + 3·4·8) − (3·5·7 + 2·4·9 + 1·6·8)<br>
+  → det = (45 + 84 + 96) − (105 + 72 + 48) = 225 − 225 = <strong>0</strong></p>
+  
+  <hr>
+  
+  <h4>💡 Dica Final:</h4>
+  <p>Use o <strong>menu de símbolos</strong> para copiar rapidamente símbolos como √, ^, log e sen! Assim você pode montar expressões completas sem precisar procurar no teclado.</p>
+
+  <h4>IMPORTANTE: </h4>
+  <p> Para representar decimal use ".", não "," </p>
+</div>
+
+
+  <!-- Seção: Tutorial Sistema Linear -->
+  <div id="sistema-tutorial" class="secao-mobile">
+    <div class="conteudo-mobile">
+      <h2>📚 Como Resolver Sistema Linear</h2>
+      <div class="conteudo-tutorial">
+        <h4>1. Escolha o tamanho do sistema:</h4>
+  <p>Selecione se o sistema terá <strong>2 incógnitas</strong> (2x2) ou <strong>3 incógnitas</strong> (3x3). Isso define quantas equações e variáveis serão resolvidas (X, Y e, se for o caso, Z).</p>
+
+  <h4>2. Digite os coeficientes:</h4>
+  <p>Preencha os valores de cada equação nos campos correspondentes. Cada número representa o coeficiente que multiplica a variável. Exemplo: em <strong>2x + 3y = 5</strong>, o “2” é o coeficiente de X e o “3” é o de Y.</p>
+
+  <h4>3. Use símbolos matemáticos:</h4>
+  <p>Você pode digitar expressões com símbolos como:</p>
+  <ul>
+    <li><strong>√16</strong> → raiz quadrada de 16</li>
+    <li><strong>2^3</strong> → 2 elevado a 3</li>
+    <li><strong>10/2</strong> → divisão normal</li>
+    <li><strong>log10</strong> → logaritmo de 10</li>
+  </ul>
+
+  <h4>4. Clique em "Calcular Sistema":</h4>
+  <p>O site resolverá automaticamente o sistema usando o método de determinantes (Regra de Cramer) e mostrará os valores de X, Y (e Z, se for 3x3).</p>
+
+  <hr>
+
+  <h4>📘 Entendendo como funciona:</h4>
+  <p>O cálculo é feito com base nos determinantes das matrizes formadas pelos coeficientes do sistema. O valor de cada variável é obtido dividindo o determinante de sua matriz individual pelo determinante principal.</p>
+  <p><strong>Exemplo (2x2):</strong></p>
+  <p>
+    <code>
+      a₁x + b₁y = c₁<br>
+      a₂x + b₂y = c₂
+    </code>
+  </p>
+  <p>det = a₁·b₂ − a₂·b₁</p>
+  <p>X = (c₁·b₂ − c₂·b₁) / det</p>
+  <p>Y = (a₁·c₂ − a₂·c₁) / det</p>
+
+  <p><strong>Exemplo:</strong><br>
+  2x + 3y = 8<br>
+  4x − y = 2<br>
+  → det = (2×(−1)) − (4×3) = −2 − 12 = −14<br>
+  → X = ((8×(−1)) − (2×3)) / (−14) = (−8 − 6) / (−14) = 1<br>
+  → Y = ((2×2) − (4×8)) / (−14) = (4 − 32) / (−14) = 2</p>
+
+  <hr>
+
+  <h4>📊 Tipos de Resultado:</h4>
+  <p><strong>Sistema Possível e Determinado:</strong> Uma única solução — valores específicos para X, Y (e Z).</p>
+  <p><strong>Sistema Possível e Indeterminado:</strong> Infinitas soluções — as equações são proporcionais.</p>
+  <p><strong>Sistema Impossível:</strong> Sem solução — as equações são contraditórias.</p>
+  <p><strong>Sistema Errado:</strong> Sem solução — Algum campo apresenta campo com formatação incorreta.</p>
+
+  <hr>
+
+  <h4>💡 Dica Final:</h4>
+  <p>Use o <strong>puxador de símbolos</strong> para copiar rapidamente √, ^, log e outros símbolos! Assim fica bem mais fácil montar e resolver seus sistemas sem precisar procurar no teclado.</p>
+
+  <h4> IMPORTANTE: <h4>
+  <p> Para representar decimal use ".", não ",".</p>
+
+  </div>
+
+  <!-- Seção: Símbolos Matemáticos -->
+  <div id="simbolos-menu" class="secao-mobile">
+    <div class="conteudo-mobile">
+      <h2>🔢 Símbolos para Copiar</h2>
+      <div class="conteudo-tutorial">
+        <p class="texto-ajuda">Clique em um símbolo para copiar e usar nos campos!</p>
+        <div class="simbolos-grid">
+          <button class="botao-simbolo" data-simbolo="√">√</button>
+          <button class="botao-simbolo" data-simbolo="^">^</button>
+          <button class="botao-simbolo" data-simbolo="/">/</button>
+          <button class="botao-simbolo" data-simbolo="log">log</button>
+          <button class="botao-simbolo" data-simbolo="ln">ln</button>
+          <button class="botao-simbolo" data-simbolo="sen">sen</button>
+          <button class="botao-simbolo" data-simbolo="cos">cos</button>
+          <button class="botao-simbolo" data-simbolo="tg">tg</button>
+        </div>
+        <p class="texto-copiado" id="texto-copiado-mobile"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== Script personalizado ===================== -->
+  <script src="../scripts/script_index.js"></script>
+
+</body>
+</html>
