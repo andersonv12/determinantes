@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Matemática</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Calculadora de Matemática</h1>
+        <p>Um projeto acadêmico de matemática e programação.</p>
+        
+        <div class="toggle-switch-container">
+            <label class="switch">
+                <input type="checkbox" id="modeToggle">
+                <span class="slider round"></span>
+            </label>
+            <span id="modeLabel" class="mode-label">Modo Calculadora</span>
+        </div>
+    </header>
+
+    <main>
+        
+        <div id="calculatorModeContent" class="mode-content active">
+            
+            <nav class="page-toggle-nav">
+                <button id="btnTogglePage">Mudar para Geometria (Pitágoras)</button>
+            </nav>
+
+            <div id="pageAlgebra" class="page-content active">
+                
+                <nav class="calculator-nav">
+                    <button data-target="calcComoUsar" class="active">Como Usar</button>
+                    <button data-target="calcDet2x2">Det. 2x2</button>
+                    <button data-target="calcDet3x3">Det. 3x3</button>
+                    <button data-target="calcSis2x2">Sistema 2x2</button>
+                    <button data-target="calcSis3x3">Sistema 3x3</button>
+                </nav>
+
+                <section id="calcComoUsar" class="card calculator-content active">
+                    <h2>Como Usar (Álgebra)</h2>
+                    <p><strong>Formato:</strong> Use números (ex: <strong>5</strong>), decimais (ex: <strong>3.5</strong>), frações (ex: <strong>3/4</strong>) ou raiz quadrada (ex: <strong>&radic;9</strong>).</p>
+                    <p><strong>Navegação:</strong> Use os botões acima para trocar de calculadora.</p>
+                </section>
+
+                <section id="calcDet2x2" class="card calculator-content">
+                    <h2>Determinante 2x2</h2>
+                    <div class="matrix-grid grid-2x2">
+                        <input type="text" id="d2_00" placeholder="a"> <input type="text" id="d2_01" placeholder="b">
+                        <input type="text" id="d2_10" placeholder="c"> <input type="text" id="d2_11" placeholder="d">
+                    </div>
+                    <div class="button-group">
+                        <button id="btnDet2x2">Calcular</button>
+                        <button type="button" class="btn-clear" data-target="Det2x2">Limpar</button>
+                    </div>
+                    <div id="resultDet2x2" class="result-box"></div>
+                </section>
+
+                <section id="calcDet3x3" class="card calculator-content">
+                    <h2>Determinante 3x3 (Regra de Sarrus)</h2>
+                    <div class="matrix-grid grid-3x3">
+                        <input type="text" id="d3_00"> <input type="text" id="d3_01"> <input type="text" id="d3_02">
+                        <input type="text" id="d3_10"> <input type="text" id="d3_11"> <input type="text" id="d3_12">
+                        <input type="text" id="d3_20"> <input type="text" id="d3_21"> <input type="text" id="d3_22">
+                    </div>
+                    <div class="button-group">
+                        <button id="btnDet3x3">Calcular</button>
+                        <button type="button" class="btn-clear" data-target="Det3x3">Limpar</button>
+                    </div>
+                    <div id="resultDet3x3" class="result-box"></div>
+                </section>
+
+                <section id="calcSis2x2" class="card calculator-content">
+                    <h2>Resolver Sistema Linear 2x2 (Cramer)</h2>
+                    <div class="system-grid grid-2x3">
+                        <span class="grid-label">x</span> <span class="grid-label">y</span> <span class="grid-label">=</span>
+                        <input type="text" id="s2_00"> <input type="text" id="s2_01"> <input type="text" id="s2_02" class="termos-independentes">
+                        <input type="text" id="s2_10"> <input type="text" id="s2_11"> <input type="text" id="s2_12" class="termos-independentes">
+                    </div>
+                    <div class="button-group">
+                        <button id="btnSis2x2">Resolver</button>
+                        <button type="button" class="btn-clear" data-target="Sis2x2">Limpar</button>
+                    </div>
+                    <div id="resultSis2x2" class="result-box"></div>
+                </section>
+
+                <section id="calcSis3x3" class="card calculator-content">
+                    <h2>Resolver Sistema Linear 3x3 (Cramer)</h2>
+                    <div class="system-grid grid-3x4">
+                        <span class="grid-label">x</span> <span class="grid-label">y</span> <span class="grid-label">z</span> <span class="grid-label">=</span>
+                        <input type="text" id="s3_00"> <input type="text" id="s3_01"> <input type="text" id="s3_02"> <input type="text" id="s3_03" class="termos-independentes">
+                        <input type="text" id="s3_10"> <input type="text" id="s3_11"> <input type="text" id="s3_12"> <input type="text" id="s3_13" class="termos-independentes">
+                        <input type="text" id="s3_20"> <input type="text" id="s3_21"> <input type="text" id="s3_22"> <input type="text" id="s3_23" class="termos-independentes">
+                    </div>
+                    <div class="button-group">
+                        <button id="btnSis3x3">Resolver</button>
+                        <button type="button" class="btn-clear" data-target="Sis3x3">Limpar</button>
+                    </div>
+                    <div id="resultSis3x3" class="result-box"></div>
+                </section>
+            </div> 
+
+            <div id="pageGeometria" class="page-content">
+                <section id="calcPitagoras" class="card"> 
+                    <h2>Teorema de Pitágoras</h2>
+                    <p>Preencha dois campos e deixe o terceiro <strong>vazio</strong> para calcular (a² + b² = c²).</p>
+                    <div class="pitagoras-grid">
+                        <label for="pit_a">Cateto A:</label>
+                        <input type="text" id="pit_a" placeholder="ex: 3">
+                        <label for="pit_b">Cateto B:</label>
+                        <input type="text" id="pit_b" placeholder="ex: 4">
+                        <label for="pit_c">Hipotenusa C:</label>
+                        <input type="text" id="pit_c" placeholder="Deixe vazio para calcular">
+                    </div>
+                    <div class="button-group">
+                        <button id="btnPitagoras">Calcular</button>
+                        <button type="button" class="btn-clear" data-target="Pitagoras">Limpar</button>
+                    </div>
+                    <div id="resultPitagoras" class="result-box"></div>
+                </section>
+            </div> 
+        </div> 
+
+        <div id="learningModeContent" class="mode-content">
+            <section class="card learning-card">
+                <h2>Modo Aprendizado</h2>
+                <p>Bem-vindo ao modo de aprendizado! Aqui você encontrará explicações sobre os conceitos matemáticos.</p>
+                
+                <h3>Determinantes</h3>
+                <p>O determinante é um valor especial associado a matrizes quadradas. Ele nos ajuda a entender propriedades da matriz, como se um sistema linear tem solução única.</p>
+                
+                <h4>Determinante 2x2</h4>
+                <p>Para uma matriz 2x2, o determinante é a diferença entre o produto da diagonal principal e o produto da diagonal secundária.</p>
+                <code>
+| a  b |
+| c  d |
+
+det = (a * d) - (b * c)
+                </code>
+                <p><strong>Exemplo:</strong></p>
+                <code>
+| 3  1 |
+| 2  4 |
+
+det = (3 * 4) - (1 * 2) = 12 - 2 = 10
+                </code>
+
+                <h4>Determinante 3x3 (Regra de Sarrus)</h4>
+                <p>Para matrizes 3x3, usamos a Regra de Sarrus:</p>
+                <p><strong>1.</strong> Repita as duas primeiras colunas ao lado da matriz.</p>
+                <p><strong>2.</strong> Some os produtos das três diagonais principais (de cima para baixo, da esquerda para a direita).</p>
+                <p><strong>3.</strong> Subtraia os produtos das três diagonais secundárias (de cima para baixo, da direita para a esquerda).</p>
+                <code>
+| a  b  c | a  b
+| d  e  f | d  e
+| g  h  i | g  h
+
+Soma (+) = (a*e*i) + (b*f*g) + (c*d*h)
+Subtração (-) = (c*e*g) + (a*f*h) + (b*d*i)
+
+det = (Soma) - (Subtração)
+                </code>
+                <h3>Sistemas Lineares (Regra de Cramer)</h3>
+                <p>A Regra de Cramer usa determinantes para encontrar a solução de um sistema linear. Para um sistema 2x2:</p>
+                <p>ax + by = c<br>dx + ey = f</p>
+                <p>Calculamos três determinantes:</p>
+                <code>
+// Determinante Principal (D)
+D = | a  b |
+    | d  e |
+
+// Determinante de X (Dx) - substitui a coluna X pela coluna de resultados
+Dx = | c  b |
+     | f  e |
+
+// Determinante de Y (Dy) - substitui a coluna Y pela coluna de resultados
+Dy = | a  c |
+     | d  f |
+                </code>
+                <p>As soluções são <strong>x = D<sub>x</sub> / D</strong> e <strong>y = D<sub>y</sub> / D</strong>.</p>
+                
+                <h4>Tipos de Sistema (SPD, SPI, SI)</h4>
+                <p>A análise dos determinantes nos diz o tipo de solução:</p>
+                <ul>
+                    <li><strong>D &ne; 0</strong> (Diferente de zero): Sistema Possível e Determinado (SPD). Tem <strong>uma solução única</strong>.</li>
+                    <li><strong>D = 0</strong> e (D<sub>x</sub> &ne; 0 ou D<sub>y</sub> &ne; 0): Sistema Impossível (SI). <strong>Não tem solução</strong>.</li>
+                    <li><strong>D = 0</strong> e D<sub>x</sub> = 0 e D<sub>y</sub> = 0: Sistema Possível e Indeterminado (SPI). Tem <strong>infinitas soluções</strong>.</li>
+                </ul>
+                <h3>Geometria (Triângulo Retângulo)</h3>
+                
+                <h4>Teorema de Pitágoras</h4>
+                <p>Em um triângulo retângulo, a soma dos quadrados dos catetos é igual ao quadrado da hipotenusa.</p>
+                <code>
+a² + b² = c²
+
+Onde:
+'c' = hipotenusa (o lado oposto ao ângulo de 90°)
+'a' e 'b' = catetos (os outros dois lados)
+                </code>
+                <p><strong>Exemplo (achar hipotenusa):</strong> Se a=3 e b=4:</p>
+                <code>c² = 3² + 4²  &rarr;  c² = 9 + 16  &rarr;  c² = 25  &rarr;  c = &radic;25  &rarr;  c = 5</code>
+                <p><strong>Exemplo (achar cateto):</strong> Se a=5 e c=13:</p>
+                <code>5² + b² = 13²  &rarr;  25 + b² = 169  &rarr;  b² = 169 - 25  &rarr;  b² = 144  &rarr;  b = &radic;144  &rarr;  b = 12</code>
+                
+                <h4>Trigonometria (SOH CAH TOA)</h4>
+                <p>Para um ângulo (&theta;) em um triângulo retângulo, identificamos os lados:</p>
+                <ul>
+                    <li><strong>Hipotenusa (H):</strong> Sempre o lado maior, oposto ao ângulo reto.</li>
+                    <li><strong>Cateto Oposto (CO):</strong> O lado oposto (na frente) do ângulo &theta;.</li>
+                    <li><strong>Cateto Adjacente (CA):</strong> O lado que toca o ângulo &theta; (que não é a hipotenusa).</li>
+                </ul>
+                <p>As fórmulas são:</p>
+                <code>
+SOH: Seno(&theta;) = Cateto Oposto / Hipotenusa
+CAH: Cosseno(&theta;) = Cateto Adjacente / Hipotenusa
+TOA: Tangente(&theta;) = Cateto Oposto / Cateto Adjacente
+                </code>
+                
+            </section>
+        </div> 
+    </main>
+
+    <footer>
+        <p>Projeto acadêmico.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
