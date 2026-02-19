@@ -1,0 +1,116 @@
+/* Paleta de Cores: Lilás (Fundo/Borda), Preto (Texto) */
+:root {
+    --cor-fundo-principal: #e0b0ff; /* Lilás Claro */
+    --cor-secundaria: #9370db; /* Lilás Médio */
+    --cor-texto: #000000; /* Preto */
+    --cor-borda: #4b0082; /* Lilás Escuro/Índigo */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-fundo-principal);
+    color: var(--cor-texto);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 800px;
+    border: 3px solid var(--cor-borda);
+}
+
+h1, h2 {
+    color: var(--cor-borda);
+    text-align: center;
+}
+
+section {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid var(--cor-secundaria);
+    border-radius: 5px;
+    background-color: #f8f0ff; /* Quase Branco Lilás */
+}
+
+/* Botões */
+button {
+    background-color: var(--cor-secundaria);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: var(--cor-borda);
+}
+
+.botao-voltar {
+    background-color: #ccc;
+    color: var(--cor-texto);
+    margin-top: 15px;
+}
+
+.botao-voltar:hover {
+    background-color: #999;
+}
+
+/* Inputs de Matriz */
+.matriz-input-grid {
+    display: inline-grid;
+    grid-template-columns: repeat(var(--colunas), 60px);
+    gap: 10px;
+    margin: 20px auto;
+    padding: 10px;
+    border: 2px solid var(--cor-secundaria);
+    border-radius: 5px;
+    justify-content: center;
+}
+
+.matriz-input-grid input {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid var(--cor-secundaria);
+    border-radius: 3px;
+}
+
+/* Resultados e Utilidades */
+.resultado {
+    margin-top: 15px;
+    padding: 10px;
+    border: 2px dashed var(--cor-borda);
+    background-color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+.escondido {
+    display: none;
+}
+
+/* Estilo para Textareas do Sistema Normal */
+#entradas-equacoes textarea {
+    width: 95%;
+    min-height: 50px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid var(--cor-secundaria);
+    border-radius: 5px;
+    font-size: 14px;
+    resize: vertical;
+}

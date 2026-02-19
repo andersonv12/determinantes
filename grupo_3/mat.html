@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Matemática Simples</title>
+    <link rel="stylesheet" href="mat.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Matrizes e Sistemas</h1>
+
+        <section id="secao-escolha-inicial">
+            <h2>O que você gostaria de calcular?</h2>
+            <button onclick="configurarMatrizNav()">Calcular Determinante de Matriz</button>
+            <button onclick="configurarSistemaNav()">Calcular Sistema de Equações</button>
+        </section>
+
+        <section id="secao-matriz" class="escondido">
+            <h2>Cálculo de Determinante de Matriz</h2>
+            <p>Selecione a dimensão da matriz:</p>
+            <button onclick="configurarMatriz(2)">Matriz 2x2</button>
+            <button onclick="configurarMatriz(3)">Matriz 3x3</button>
+
+            <div id="container-matriz">
+                </div>
+
+            <div id="resultado-matriz" class="resultado"></div>
+            <button class="botao-voltar" onclick="voltarParaInicial()">Voltar</button>
+        </section>
+
+        <section id="secao-sistema" class="escondido">
+            <h2>Resolver Sistema de Equações (Forma Normal)</h2>
+            <p>Selecione o número de incógnitas:</p>
+            <button onclick="prepararSistemaNormal(2)">Sistema 2x2</button>
+            <button onclick="prepararSistemaNormal(3)">Sistema 3x3</button>
+            
+            <button class="botao-voltar" onclick="voltarParaInicial()">Voltar</button>
+        </section>
+
+        <section id="secao-sistema-normal" class="escondido">
+            <h2>Resolução do Sistema na Forma Normal</h2>
+            <p id="instrucao-sistema-normal"></p>
+            <div id="entradas-equacoes">
+                </div>
+            <button id="botao-calcular-sistema-normal" onclick="calcularSistemaNormal()">Calcular Incógnitas</button>
+            <div id="resultado-sistema-normal" class="resultado"></div>
+            <button class="botao-voltar" onclick="mostrarSecao('secao-sistema')">Voltar</button>
+        </section>
+    </div>
+
+    <script src="mat.js"></script>
+</body>
+</html>
